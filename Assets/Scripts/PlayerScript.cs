@@ -19,18 +19,28 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+        if (Input.touchCount > 0) {
+        Touch touch = Input.GetTouch(0);
+        if (touch.phase == TouchPhase.Began) {
+            Move();
+            }
+        }
+        else if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            if(TextAboutStart)
-                Destroy(TextAboutStart);
-            _vectorToMove = 
-            (_vectorToMove.normalized == Vector3.forward)? 
-            (Vector3.left):
-            (Vector3.forward);
+            Move();
         }
     }
     void FixedUpdate()
     {
         _rigidbody.velocity = _vectorToMove * Speed + Physics.gravity;
     } 
+    private void Move()
+    {
+        if(TextAboutStart)
+            Destroy(TextAboutStart);
+        _vectorToMove = 
+        (_vectorToMove.normalized == Vector3.forward)? 
+        (Vector3.left):
+        (Vector3.forward);
+    }
 }
