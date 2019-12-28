@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 835032356471998360}
   - component: {fileID: 835032356471998361}
   - component: {fileID: 835032356471998358}
+  - component: {fileID: -5975872464842466518}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -108,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: 0
   Speed: 2
+  TextAboutStart: {fileID: 0}
 --- !u!54 &835032356471998358
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,3 +126,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5975872464842466518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835032356471998359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61925d9461d920643933a001c4ee932f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Chancks:
+  - {fileID: 3116315471378548126, guid: 92956dad0d58aee4e946045b5b981d14, type: 3}
+  - {fileID: 4062577162650536437, guid: 584ccdc29d0fa62478fed511af49b370, type: 3}
+  - {fileID: 3597146684198704091, guid: 9edc7bf16780f634191ad4ef2bbb5f5b, type: 3}
+  StartChank: {fileID: 0}

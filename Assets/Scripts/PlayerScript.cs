@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public int Score = 0;
-    [SerializeField] private float Speed = 60;
-    public float AddSpeed{ get {return Speed;} set {Speed = Speed * value;}}
+    [HideInInspector] public int Score = 0;
+    [SerializeField] private float Speed = 2;
+    public float AddSpeed{ set {Speed = Speed * value;}}
+    public GameObject TextAboutStart;
     
     private Vector3 _vectorToMove = Vector3.zero;
     private Rigidbody _rigidbody;
@@ -22,6 +21,8 @@ public class PlayerScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
+            if(TextAboutStart)
+                Destroy(TextAboutStart);
             _vectorToMove = 
             (_vectorToMove.normalized == Vector3.forward)? 
             (Vector3.left):
@@ -30,7 +31,6 @@ public class PlayerScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        _rigidbody.velocity = _vectorToMove * Speed + Vector3.up * Physics.gravity.y;
+        _rigidbody.velocity = _vectorToMove * Speed + Physics.gravity;
     } 
-    
 }
