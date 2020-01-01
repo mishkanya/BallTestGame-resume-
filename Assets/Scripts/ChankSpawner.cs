@@ -7,7 +7,7 @@ public class ChankSpawner : MonoBehaviour
     public GameObject[] Chancks;
     public GameObject StartChank;
     private List<GameObject> _sceneChanks = new List<GameObject>();
-    private const float _distanceForSpawnAndRemoveChanks = 7;
+    private const float _distanceForSpawnAndRemoveChanks = 80;
     private void Start()
     {
         _sceneChanks.Add(StartChank);
@@ -22,7 +22,7 @@ public class ChankSpawner : MonoBehaviour
     private void SpawnChanck()
     {
         GameObject newChanck = Instantiate(Chancks[Random.Range(0,Chancks.Length)]);
-        newChanck.transform.position = _sceneChanks[_sceneChanks.Count - 1].transform.FindChild("ChankEnd").position - newChanck.transform.FindChild("ChankStart").transform.position;
+        newChanck.transform.position = _sceneChanks[_sceneChanks.Count - 1].transform.Find("ChankEnd").position - newChanck.transform.Find("ChankStart").transform.position;
         _sceneChanks.Add(newChanck);
         DeleteChanck();
     } 

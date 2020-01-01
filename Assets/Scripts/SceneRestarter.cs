@@ -1,12 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Monetization;
 
-public class SceneRestarter : MonoBehaviour
+public class SceneRestarter : RestarGame
 {
-    private void OnTriggerEnter(Collider col){
-        if(col.tag == "Player")
-            SceneManager.LoadScene(0);
+    private void OnTriggerEnter(Collider col)
+    {
+        if(col.tag == "Player"){
+            ReloadScene();
+        }
     }
 }

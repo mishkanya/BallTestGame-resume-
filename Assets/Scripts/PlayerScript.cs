@@ -5,11 +5,12 @@ public class PlayerScript : MonoBehaviour
     [HideInInspector] public int Score = 0;
     [SerializeField] private float Speed = 2;
     public float AddSpeed{ set {Speed = Speed * value;}}
-    public GameObject TextAboutStart;
+    public GameObject StartHidingObject;
     
     private Vector3 _vectorToMove = Vector3.zero;
     private Rigidbody _rigidbody;
     private CapsuleCollider _collider; 
+    
 
     void Start()
     {
@@ -17,29 +18,37 @@ public class PlayerScript : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.touchCount > 0) {
-        Touch touch = Input.GetTouch(0);
-        if (touch.phase == TouchPhase.Began) {
-            Move();
+        if(Time.timeScale != 0)
+        {
+            if (Input.touchCount > 0) {
+                Touch touch = Input.GetTouch(0);
+
+                if (touch.phase == TouchPhase.Began ) {
+                    Move();
+                }
+            }
+            else if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+            {
+                Move();
             }
         }
-        else if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        {
-            Move();
-        }
     }
-    void FixedUpdate()
+
+    private void FixedUpdate()
     {
-        _rigidbody.velocity = _vectorToMove * Speed + Physics.gravity;
+        _vectorToMove = _vectorToMove.normalized;
+        _vectorToMove *= Speed;
+        _vectorToMove.y = _rigidbody.velocity.y;
+        _rigidbody.velocity = _vectorToMove + Physics.gravity/4;
     } 
-    private void Move()
+    public void Move()
     {
-        if(TextAboutStart)
-            Destroy(TextAboutStart);
+        if(StartHidingObject)
+            Destroy(StartHidingObject);
         _vectorToMove = 
-        (_vectorToMove.normalized == Vector3.forward)? 
+        (_vectorToMove.normalized.z > 0)? 
         (Vector3.left):
         (Vector3.forward);
     }

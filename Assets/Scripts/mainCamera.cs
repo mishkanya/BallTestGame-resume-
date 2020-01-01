@@ -12,6 +12,7 @@ public class mainCamera : MonoBehaviour
     }
     void Update()
     {
-        transform.position += ((_player.transform.position + _deltaOfVectors) - transform.position) * Time.deltaTime * _speed;
+        transform.position = _player.transform.position + _deltaOfVectors; 
+        //transform.position += ((_player.transform.position + _deltaOfVectors) - transform.position) * Time.deltaTime * _speed;
     }
 }
