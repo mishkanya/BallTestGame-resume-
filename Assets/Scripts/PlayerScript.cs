@@ -2,20 +2,39 @@
 
 public class PlayerScript : MonoBehaviour
 {
-    [HideInInspector] public int Score = 0;
+    [HideInInspector] public float Score = 0;
     [SerializeField] private float Speed = 2;
     public float AddSpeed{ set {Speed = Speed * value;}}
     public GameObject StartHidingObject;
+    [HideInInspector] public float BestScore = 0, LastScore = 0;
     
     private Vector3 _vectorToMove = Vector3.zero;
     private Rigidbody _rigidbody;
     private CapsuleCollider _collider; 
+    private const float _multiplySpeedPerMoment = .01f;
     
 
+    private void Awake(){
+        
+        if(PlayerPrefs.HasKey("BestScore") == false){
+            PlayerPrefs.SetFloat("BestScore",0);
+        }
+        else{
+            BestScore = PlayerPrefs.GetFloat("BestScore");
+        }
+        if(PlayerPrefs.HasKey("LastScore") == false){
+            PlayerPrefs.SetFloat("LastScore",0);
+        }
+        else{
+            LastScore = PlayerPrefs.GetFloat("LastScore");
+        }
+    }
+     
     void Start()
     {
         _collider = GetComponent<CapsuleCollider>();
         _rigidbody = GetComponent<Rigidbody>();
+        SetScoresData(BestScore,LastScore);
     }
 
     private void Update()
@@ -42,6 +61,7 @@ public class PlayerScript : MonoBehaviour
         _vectorToMove *= Speed;
         _vectorToMove.y = _rigidbody.velocity.y;
         _rigidbody.velocity = _vectorToMove + Physics.gravity/4;
+        Speed += Time.fixedDeltaTime * _multiplySpeedPerMoment; 
     } 
     public void Move()
     {
@@ -51,5 +71,9 @@ public class PlayerScript : MonoBehaviour
         (_vectorToMove.normalized.z > 0)? 
         (Vector3.left):
         (Vector3.forward);
+    }
+    public void SetScoresData(float _bestScore, float _lastScore)
+    {
+        StartHidingObject.transform.FindChild("LastScore").GetComponent<TextMesh>().text = "Last score:" + _lastScore.ToString() + "\nBest score:"+ _bestScore.ToString();
     }
 }

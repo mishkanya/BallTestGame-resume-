@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - Crystal
     - PauseButton
     - PlayerScript
+    - RestartButton
     - SceneRestarter
     - mainCamera
     Unity.TextMeshPro.dll:
@@ -16,11 +17,6 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
-    UnityEngine.Advertisements.dll:
-    - UnityEngine.Advertisements.Placeholder
-    - UnityEngine.Advertisements.Platform.Editor.BannerPlaceholder
-    UnityEngine.Monetization.dll:
-    - UnityEngine.Monetization.Placeholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -46,6 +42,8 @@ ScriptsOnlyBuild:
     - Class: 33
       Script: {instanceID: 0}
     - Class: 43
+      Script: {instanceID: 0}
+    - Class: 45
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -88,23 +86,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10392}
     - Class: 114
-      Script: {instanceID: 10700}
+      Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10782}
+      Script: {instanceID: 10702}
     - Class: 114
-      Script: {instanceID: 11010}
+      Script: {instanceID: 10784}
     - Class: 114
-      Script: {instanceID: 11024}
+      Script: {instanceID: 11012}
     - Class: 114
-      Script: {instanceID: 11284}
+      Script: {instanceID: 11026}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 11286}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11386}
     - Class: 114
-      Script: {instanceID: 11680}
+      Script: {instanceID: 11472}
     - Class: 114
-      Script: {instanceID: 25600}
+      Script: {instanceID: 11586}
+    - Class: 114
+      Script: {instanceID: 11686}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -118,6 +118,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -228,7 +230,7 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 7068e804fb2fcacc2bf660f3f9244ba7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: mainCamera
@@ -352,6 +354,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RestartButton
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -498,6 +506,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 1ba7ad9c5b1b1c81c6bd7e3db1fc7fb9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BonuseSpawner
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -522,7 +536,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: f3c38b3685bba7de8db5babdbe87cb65
+      Hash: 93eec9fde2e1bd7a270a3529755d5076
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -610,26 +624,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 1ba7ad9c5b1b1c81c6bd7e3db1fc7fb9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BonuseSpawner
-  - hash:
-      serializedVersion: 2
-      Hash: 3a203302d03dad948b487a4ded7168c5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BoosterUp
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UnBoosterSpeed
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
   playerPath: "C:/Users/yaham/OneDrive/\u0420\u0430\u0431\u043E\u0447\u0438\u0439
-    \u0441\u0442\u043E\u043B/BallGame.apk"
+    \u0441\u0442\u043E\u043B/MyGameForMe.apk"

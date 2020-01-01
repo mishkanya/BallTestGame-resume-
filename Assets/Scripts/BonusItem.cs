@@ -12,12 +12,6 @@ public abstract class BonusItem : MonoBehaviour
     protected float _rotationSpeed = 80f;
     
     protected Text _scoreBar;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         

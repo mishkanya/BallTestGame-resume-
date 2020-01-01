@@ -183,7 +183,7 @@ SpringJoint:
   m_ConnectedBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 0
-  m_ConnectedAnchor: {x: -6, y: 2, z: -1.47}
+  m_ConnectedAnchor: {x: -6, y: 5.23, z: -1.47}
   serializedVersion: 2
   m_Spring: 10
   m_Damper: 0.2
@@ -280,7 +280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 553100658}
   m_LocalRotation: {x: 0.1523661, y: -0.50085634, z: 0.09007317, w: 0.84723926}
-  m_LocalPosition: {x: -4.29, y: 2.14, z: -2.26}
+  m_LocalPosition: {x: -4.29, y: 4.23, z: -2.26}
   m_LocalScale: {x: 0.3, y: 0.29999995, z: 0.3}
   m_Children: []
   m_Father: {fileID: 279964725}
@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713029e138599714cb9f13bce089f89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quitBool: 0
 --- !u!45 &963194230
 Skybox:
   m_ObjectHideFlags: 0
@@ -799,7 +800,7 @@ GameObject:
   - component: {fileID: 1345164671}
   - component: {fileID: 1345164670}
   m_Layer: 0
-  m_Name: LastScore (1)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,7 +1101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1613825830
 Transform:
   m_ObjectHideFlags: 0
@@ -1192,7 +1193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731837229}
   m_LocalRotation: {x: 0.22584355, y: -0.4821776, z: 0.13002689, w: 0.83641654}
-  m_LocalPosition: {x: 1.9, y: -3.53, z: 3.63}
+  m_LocalPosition: {x: 3.83, y: -3.53, z: 6.34}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 279964725}
@@ -1206,7 +1207,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731837229}
-  m_Text: 'Last score:'
+  m_Text: 'Last score:
+
+    Best score:'
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -1285,7 +1288,7 @@ RectTransform:
   m_GameObject: {fileID: 1792081031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1304431448}
   m_RootOrder: 0
@@ -1293,7 +1296,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 282.5, y: -195.9}
-  m_SizeDelta: {x: 237.5, y: 123.4}
+  m_SizeDelta: {x: 387.5, y: 280.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792081033
 MonoBehaviour:
@@ -1315,11 +1318,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 81d01dc367c3da64baa0f768d279aee9, type: 3}
-    m_FontSize: 100
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 100
+    m_MaxSize: 215
     m_Alignment: 0
     m_AlignByGeometry: 1
     m_RichText: 0

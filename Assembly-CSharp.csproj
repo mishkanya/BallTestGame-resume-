@@ -44,11 +44,8 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\NeonSphere - Starter Pack\Scripts\CameraController.cs" />
-     <Compile Include="Assets\NeonSphere - Starter Pack\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\BonuseSpawner.cs" />
+  <ItemGroup>     <Compile Include="Assets\Scripts\BonuseSpawner.cs" />
      <Compile Include="Assets\Scripts\BonusItem.cs" />
-     <Compile Include="Assets\Scripts\BoosterUp.cs" />
      <Compile Include="Assets\Scripts\ChankSpawner.cs" />
      <Compile Include="Assets\Scripts\Crystal.cs" />
      <Compile Include="Assets\Scripts\mainCamera.cs" />
@@ -57,7 +54,6 @@
      <Compile Include="Assets\Scripts\RestarGame.cs" />
      <Compile Include="Assets\Scripts\RestartButton.cs" />
      <Compile Include="Assets\Scripts\SceneRestarter.cs" />
-     <Compile Include="Assets\Scripts\UnBoosterSpeed.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
